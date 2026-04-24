@@ -1,0 +1,6 @@
+{
+  "name": "Reserva de Salas - Clúster",
+  "description": "Sistema de gestión y reserva de salas para formación y reuniones con vista de calendario por columnas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

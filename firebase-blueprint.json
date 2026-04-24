@@ -1,0 +1,28 @@
+{
+  "entities": {
+    "Reservation": {
+      "title": "Reservation",
+      "description": "A room reservation entry",
+      "type": "object",
+      "properties": {
+        "roomId": { "type": "string", "description": "ID of the room being reserved" },
+        "roomName": { "type": "string", "description": "Display name of the room" },
+        "startTime": { "type": "string", "format": "date-time", "description": "ISO start time" },
+        "endTime": { "type": "string", "format": "date-time", "description": "ISO end time" },
+        "title": { "type": "string", "description": "Title of the meeting/event" },
+        "userName": { "type": "string", "description": "Name of the person making the reservation" },
+        "organization": { "type": "string", "description": "Organization or company name" },
+        "userId": { "type": "string", "description": "UID of the user who created the reservation" },
+        "createdAt": { "type": "string", "format": "date-time", "description": "Creation timestamp" },
+        "updatedAt": { "type": "string", "format": "date-time", "description": "Update timestamp" }
+      },
+      "required": ["roomId", "startTime", "endTime", "title", "userName", "userId"]
+    }
+  },
+  "firestore": {
+    "/reservations/{reservationId}": {
+      "schema": "Reservation",
+      "description": "Collection of room reservations"
+    }
+  }
+}
